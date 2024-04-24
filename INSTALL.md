@@ -271,7 +271,8 @@ you'd like.
 
 Our binaries are signed with a PGP key owned by Freedom of the Press Foundation:
 * Name: Dangerzone Release Key
-* PGP public key fingerprint [`DE28 AB24 1FA4 8260 FAC9 B8BA A7C9 B385 2260 4281`](https://keys.openpgp.org/vks/v1/by-fingerprint/DE28AB241FA48260FAC9B8BAA7C9B38522604281).
+* PGP public key fingerprint `DE28 AB24 1FA4 8260 FAC9 B8BA A7C9 B385 2260 4281`
+  - You can download this key [from the keys.openpgp.org keyserver](https://keys.openpgp.org/vks/v1/by-fingerprint/DE28AB241FA48260FAC9B8BAA7C9B38522604281).
 
 _(You can also cross-check this fingerprint with the fingerprint in our
 [Mastodon page](https://fosstodon.org/@dangerzone) and the fingerprint in the
