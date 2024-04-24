@@ -267,7 +267,7 @@ is optional and provides defense in depth: the Dangerzone binaries include
 operating system-specific signatures, and you can just rely on those alone if
 you'd like.
 
-### Signing key
+### Obtaining signing key
 
 Our binaries are signed with a PGP key owned by Freedom of the Press Foundation:
 * Name: Dangerzone Release Key
