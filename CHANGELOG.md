@@ -15,12 +15,17 @@ since 0.4.1, and this project adheres to [Semantic Versioning](https://semver.or
 
 ### Fixed
 
+- Handle timeout errors (`"Timeout after 3 seconds"`) more gracefully ([issue #749](https://github.com/freedomofpress/dangerzone/issues/749))
+- Make Dangerzone work in macOS versions prior to Ventura (13), thanks to [@maltfield](https://github.com/maltfield) ([issue #471](https://github.com/freedomofpress/dangerzone/issues/471))
 - Make OCR work again in Qubes Fedora 38 templates ([issue #737](https://github.com/freedomofpress/dangerzone/issues/737))
 - Make .svg / .bmp files selectable when browsing files via the Dangerzone GUI ([#722](https://github.com/freedomofpress/dangerzone/pull/722))
+- Properly handle filenames with invalid Unicode characters in the Dangerzone CLI, thanks to [@naglis](https://github.com/naglis) ([issue #768](https://github.com/freedomofpress/dangerzone/issues/768))
 
 ### Changed
 
-- Use the newest reimplementation of the PyMuPDF rendering enging (`fitz`) ([issue #700](https://github.com/freedomofpress/dangerzone/issues/700))
+- Sign our release assets with the Dangerzone signing key, and provide
+  instructions to end-users ([issue #761](https://github.com/freedomofpress/dangerzone/issues/761)
+- Use the newest reimplementation of the PyMuPDF rendering engine (`fitz`) ([issue #700](https://github.com/freedomofpress/dangerzone/issues/700))
 - Development: Build Dangerzone using the latest Wix 3.14 release ([#746](https://github.com/freedomofpress/dangerzone/pull/746)
 
 ## Dangerzone 0.6.0
