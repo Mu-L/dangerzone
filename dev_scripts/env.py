@@ -689,9 +689,18 @@ class Env:
             install_deps = DOCKERFILE_BUILD_FEDORA_DEPS
         else:
             install_deps = DOCKERFILE_BUILD_DEBIAN_DEPS
-            if self.distro == "ubuntu" and self.version in ("22.04", "jammy"):
+            if (
+                self.distro == "ubuntu"
+                and self.version in ("22.04", "jammy")
+                and not "freedom.press/apt-tools-prod" in dz_install_cmd
+            ):
                 # Ubuntu Jammy requires a more up-to-date conmon
-                # package (see https://github.com/freedomofpress/dangerzone/issues/685)
+                # package (see https://github.com/freedomofpress/dangerzone/issues/685).
+                #
+                # NOTE: If we install Dangerzone from our prod/QA repos, we
+                # shouldn't use this workaround, as these repos should contain the
+                # proper conmon version. Moreover, we confuse the APT command this way,
+                # which sees the same source with different keys (inline vs downloaded).
                 install_deps = DOCKERFILE_CONMON_UPDATE + DOCKERFILE_BUILD_DEBIAN_DEPS
             elif self.distro == "ubuntu" and self.version not in ("22.04", "jammy"):
                 install_deps = DOCKERFILE_UBUNTU_REM_USER + DOCKERFILE_BUILD_DEBIAN_DEPS
